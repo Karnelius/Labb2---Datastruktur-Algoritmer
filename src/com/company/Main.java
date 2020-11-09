@@ -3,21 +3,23 @@ package com.company;
 public class Main {
 
 
-    public static void main(String args[]) {
-
-        BubbleSort sort = new BubbleSort();
-
-        int arr[] = {64, 34, 25, 12, 22, 11, 90, 141, 3, 55, 10, 4, 14, 1, 2, 9, 210};
-        sort.bubbleSort(arr);
-        System.out.println("Sorterad array");
-        sort.printTheArray(arr);
-        System.out.println("-----------------");
-
-
-
+    public static void main(String[] args) {
+        BubbleSort bs = new BubbleSort();
+        int[] array = {44, 78, 5, 12, 1, 8, 39};
+        bs.bubbleSort(array);
+        System.out.println("Sorted array: ");
+        bs.printArray(array);
+        System.out.println("\n-----------------");
 
 
         BinaryTree bt = new BinaryTree();
+        /* 8,3,10,1,6,13
+
+                  8
+               3     10
+             1   6      13
+
+        */
 
         bt.insert(8);
         bt.insert(3);
@@ -26,29 +28,28 @@ public class Main {
         bt.insert(6);
         bt.insert(13);
 
-        
-        bt.insert(1000);
-        bt.remove(1000);
-
-
-        System.out.println("Print In Order: ");
+        System.out.println("\nTree in order:");
         bt.printInOrder();
-        System.out.println("------");
 
-        System.out.println("Print in Reversed Order");
-        bt.printInReversedOrder();
-        System.out.println("------");
+        System.out.println("\nTree in reverse order:");
+        bt.printTreeInReverseOrder();
 
-        System.out.println("Print in Pre Order: ");
-        bt.printInPreOrder();
-        System.out.println("------");
+        System.out.println("\nTree in pre-order:");
+        bt.printTreeInPreOrder();
 
-        System.out.println("Print in Post Order");
-        bt.printInPostOrder();
-        System.out.println("------");
+        System.out.println("\nTree in post-order:");
+        bt.printTreeInPostOrder();
+
+        System.out.println("\nTree in order after deletion");
+
+        bt.delete(1);
+        bt.delete(10);
+        bt.delete(8);
+
+        bt.printTreeInPostOrder();
 
     }
-    }
+}
 
 
 

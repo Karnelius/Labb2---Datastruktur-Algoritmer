@@ -1,29 +1,21 @@
 package com.company;
 
 
-public class BubbleSort {
+class BubbleSort {
 
-
-    void bubbleSort(int[] array)
-    {
-        int n = array.length;
-        for (int i = 0; i<n-1; i++)
-            for (int j = 0; j<n-i-1; j++)
+    void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length-1; i++)
+            for (int j = 0; j < array.length-i-1; j++)
                 if (array[j] > array[j+1])
                 {
-
-                    int temp = array[j];
+                    int swap = array[j];
                     array[j] = array[j+1];
-                    array[j+1] = temp;
+                    array[j+1] = swap;
                 }
     }
 
-
-    void printTheArray(int[] array)
-    {
-        int n = array.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(array[i] + " ");
+    void printArray(int[] array) {
+        for (int i : array) System.out.print(i + " ");
         System.out.println();
     }
 }
