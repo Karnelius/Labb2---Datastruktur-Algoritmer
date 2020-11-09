@@ -1,2 +1,3 @@
 # Labb2---Datastruktur-Algoritmer
-BubbleSortAlgoritm&amp;BinarySearchTree
+BubbleSortAlgoritmer & BinarySearchTree
+Contributors: David Karnel & Zacharias Göransson
